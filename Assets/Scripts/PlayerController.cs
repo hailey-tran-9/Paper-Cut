@@ -6,11 +6,6 @@ using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
-    #region Camera_variables
-    public CinemachineVirtualCamera vcam;
-    CinemachineFramingTransposer vcamFT;
-    #endregion
-
     #region Player_variables
     private Rigidbody2D rb;
     #endregion
@@ -57,9 +52,6 @@ public class PlayerController : MonoBehaviour
     #region Unity_functions
     void Awake()
     {
-        // Set the Cinemachine Framing Transposer
-        vcamFT = vcam.GetComponentInChildren<CinemachineFramingTransposer>();
-
         // Grab the player's Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
 
@@ -134,18 +126,6 @@ public class PlayerController : MonoBehaviour
                 dir = "down";
             }
             // Debug.Log("Changed gravity direction to: " + dir);
-        }
-    }
-
-    void FixedUpdate()
-    {
-        // Reposition the camera
-        if (x_input == -1) {
-            // Position the camera to face left
-            vcamFT.m_TrackedObjectOffset.x = -5f;
-        } else if (x_input == 1) {
-            // Position the camera to face right
-            vcamFT.m_TrackedObjectOffset.x = 5f;
         }
     }
     #endregion
