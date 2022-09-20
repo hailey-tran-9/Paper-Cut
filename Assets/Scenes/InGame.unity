@@ -168,6 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1169941f7499d42b89c7f213fd3bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 3701472774897437418, guid: f6de9dbbaee499c4e948375f94920234, type: 3}
+  bulletTransform: {fileID: 1061857933}
+  canFire: 1
+  timeBetweenFiring: 0.3
 --- !u!1 &217990933
 GameObject:
   m_ObjectHideFlags: 3
