@@ -55,16 +55,5 @@ public class ObjectController : MonoBehaviour
             otherGO.GetComponent<BulletScript>().OnBecameInvisible();
         }
     }
-
-    // void OnCollisionExit2D(Collision2D other)
-    // {
-    //     GameObject otherGO = other.gameObject;
-
-    //     // If the bullet comes into contact with the object, change moved to false
-    //     if (otherGO.tag == "Bullet") {
-    //         moved = false;
-    //     }
-    // }
-
     #endregion
 }
