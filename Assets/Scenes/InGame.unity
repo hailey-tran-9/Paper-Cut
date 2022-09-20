@@ -826,7 +826,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2052230669
 GameObject:
@@ -1082,6 +1082,10 @@ PrefabInstance:
       propertyPath: vcam
       value: 
       objectReference: {fileID: 816195088}
+    - target: {fileID: 1360004247383749963, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
 --- !u!1001 &6332669424060331303
