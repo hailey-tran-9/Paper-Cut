@@ -1212,6 +1212,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1360004247383749960, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+      propertyPath: hp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360004247383749960, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
       propertyPath: vcam
       value: 
       objectReference: {fileID: 816195088}

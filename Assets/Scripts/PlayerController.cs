@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     // Decrease the player's health
     void LoseHp(int dmg)
     {
+        Debug.Log("Player lost " + dmg.ToString() + "!");
         hp -= dmg;
 
         // Check whether or not the player dies
@@ -60,6 +61,15 @@ public class PlayerController : MonoBehaviour
 
         // Set the initial jump variables
         isJumping = false;
+    }
+
+    // Damage the player if it comes in contact with an enemy
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        if (otherGO.tag == "Enemy") {
+            LoseHp(otherGO.GetComponent<EnemyController>().GetDmg());
+        }
     }
 
     // Determine if the player is touching the ground

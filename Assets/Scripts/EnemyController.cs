@@ -14,6 +14,13 @@ public class EnemyController : MonoBehaviour
     private int damage;
     #endregion
 
+    #region Combat_functions
+    public int GetDmg()
+    {
+        return damage;
+    }
+    #endregion
+
     #region Health Methods
     public void DecreaseHealth(int amount)
     {
