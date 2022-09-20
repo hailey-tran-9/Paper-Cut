@@ -16,10 +16,17 @@ public class PlayerController : MonoBehaviour
     float x_input;
     #endregion
 
+    #region Combat_variables
+    string dir;
+    #endregion
+
     #region Unity_functions
     void Awake()
     {
         vcamFT = vcam.GetComponentInChildren<CinemachineFramingTransposer>();
+
+        // Set the initial direction of gravity to push down
+        dir = "down";
     }
 
     // // Start is called before the first frame update
@@ -43,6 +50,20 @@ public class PlayerController : MonoBehaviour
             // Move right
             transform.position = new Vector3(transform.position.x + (moveSpeed * Time.deltaTime),
                 transform.position.y, 10);
+        }
+
+        // Change the direction of gravity when the player hits left shift
+        if (Input.GetKeyDown("left shift")) {
+            if (dir == "down") {
+                dir = "left";
+            } else if (dir == "left") {
+                dir = "up";
+            } else if (dir == "up") {
+                dir = "right";
+            } else if (dir == "right") {
+                dir = "down";
+            }
+            Debug.Log("Changed gravity direction to: " + dir);
         }
     }
 
