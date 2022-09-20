@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Combat_variables
+    public static string dir;
     public int hp;
-    string dir;
     #endregion
 
     #region Combat_functions

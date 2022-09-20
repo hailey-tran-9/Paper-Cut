@@ -9,6 +9,7 @@ public class BulletScript : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
 
+    #region Unity_functions
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +22,12 @@ public class BulletScript : MonoBehaviour
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnBecameInvisible()
+    #endregion
+    
+    #region State_functions
+    public void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
+    #endregion
 }
