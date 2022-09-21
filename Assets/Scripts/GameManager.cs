@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
+    public GameObject tutorial;
+    bool tutorialOpen;
 
     #region Unity_functions
     private void Awake() {
@@ -16,6 +18,20 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
+        tutorial.SetActive(true);
+        tutorialOpen = true;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown("escape") && tutorialOpen == true) {
+            tutorial.SetActive(false);
+            tutorialOpen = false;
+        } else if (Input.GetKeyDown("escape") && tutorialOpen == false) {
+            tutorial.SetActive(true);
+            tutorialOpen = true;
+        }
     }
     #endregion
 

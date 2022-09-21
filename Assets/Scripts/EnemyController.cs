@@ -22,13 +22,27 @@ public class EnemyController : MonoBehaviour
     #endregion
 
     #region Health Methods
-    public void DecreaseHealth(int amount)
+    IEnumerator LoseHpHelper(int amount)
     {
         health -= amount;
+
+        // Briefly tint the enemy red to show it getting hit
+        Color initialColor = gameObject.GetComponent<SpriteRenderer>().color;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color32(255, 129, 129, 255);
+        yield return new WaitForSeconds(0.25f);
+        gameObject.GetComponent<SpriteRenderer>().color = initialColor;
+        yield return new WaitForSeconds(0.1f);
+
         if(health <= 0)
         {
+            // Destroy the enemy
             Destroy(gameObject);
         }
+    }
+
+    public void LoseHp(int amount)
+    {
+        StartCoroutine(LoseHpHelper(amount));
     }
     #endregion
 }

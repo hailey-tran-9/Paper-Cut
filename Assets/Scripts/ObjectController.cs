@@ -13,22 +13,25 @@ public class ObjectController : MonoBehaviour
     public float duration;
     #endregion
 
+    #region Combat_variables
+    public int dmg;
+    #endregion
+
     #region Gravity_functions
-    public IEnumerator ChangeGravity()
+    IEnumerator ChangeGravity()
     {
         string currDir = PlayerController.dir;
         if (currDir == "down") {
-            rb.velocity = Vector2.down * force;
+            rb.gravityScale = force;
         } else if (currDir == "left") {
             rb.velocity = Vector2.left * force;
+            yield return new WaitForSeconds(duration);
         } else if (currDir == "up") {
-            rb.velocity = Vector2.up * force;
+            rb.gravityScale = -force;
         } else if (currDir == "right") {
             rb.velocity = Vector2.right * force;
+            yield return new WaitForSeconds(duration);
         }
-
-        yield return new WaitForSeconds(duration);
-
         rb.velocity = Vector2.zero;
     }
     #endregion
@@ -38,6 +41,23 @@ public class ObjectController : MonoBehaviour
     {
         // Set rb to the object's Rigidbody2D component
         rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    IEnumerator OnCollisionHelper(GameObject go)
+    {
+        // Deal damage
+        go.GetComponent<EnemyController>().LoseHp(dmg);
+
+        // Knockback
+        Rigidbody2D enemyRb = go.GetComponent<Rigidbody2D>();
+        Vector2 diff = transform.position - enemyRb.transform.position;
+        diff = diff.normalized * 5;
+        rb.AddForce(diff, ForceMode2D.Impulse);
+        rb.gravityScale = -2;
+        yield return new WaitForSeconds(0.35f);
+
+        // Destroy this object
+        Destroy(gameObject);
     }
 
     // Handle collisions
@@ -53,6 +73,11 @@ public class ObjectController : MonoBehaviour
             // and if we want to keep destroying the bullet uniform
             // (Here I could just do Destroy(otherGO or other.gameObject))
             otherGO.GetComponent<BulletScript>().OnBecameInvisible();
+        }
+
+        // If the object comes into contact with an enemy, do damage and destroy itself
+        if (otherGO.tag == "Enemy") {
+            StartCoroutine(OnCollisionHelper(otherGO));
         }
     }
     #endregion

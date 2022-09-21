@@ -67,13 +67,21 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.1622997
       objectReference: {fileID: 0}
+    - target: {fileID: 2902645778886318385, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902645778886318387, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
+      propertyPath: dmg
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2902645778886318387, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
       propertyPath: force
-      value: 4
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2902645778886318387, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
       propertyPath: duration
-      value: 0.75
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
