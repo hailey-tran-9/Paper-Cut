@@ -37,7 +37,9 @@ public class EnemyBulletScript : MonoBehaviour
 
         if (otherGO.tag == "Player")
         {
+            otherGO.GetComponent<PlayerController>().LoseHp(5);
             Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }
