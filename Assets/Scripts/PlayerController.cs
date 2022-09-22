@@ -25,6 +25,13 @@ public class PlayerController : MonoBehaviour
     public int hp;
     #endregion
 
+    #region Direction_variables
+    public GameObject north;
+    public GameObject east;
+    public GameObject south;
+    public GameObject west;
+    #endregion
+
     #region Combat_functions
     // Decrease the player's health
     public void LoseHp(int dmg)
@@ -58,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
         // Set the initial direction of gravity to push down
         dir = "down";
+        south.SetActive(true);
 
         // Set the initial jump variables
         isJumping = false;
@@ -127,13 +135,21 @@ public class PlayerController : MonoBehaviour
         // Change the direction of gravity when the player hits left shift
         if (Input.GetKeyDown("left shift")) {
             if (dir == "down") {
+                south.SetActive(false);
                 dir = "left";
+                west.SetActive(true);
             } else if (dir == "left") {
+                west.SetActive(false);
                 dir = "up";
+                north.SetActive(true);
             } else if (dir == "up") {
+                north.SetActive(false);
                 dir = "right";
+                east.SetActive(true);
             } else if (dir == "right") {
+                east.SetActive(false);
                 dir = "down";
+                south.SetActive(true);
             }
             // Debug.Log("Changed gravity direction to: " + dir);
         }
