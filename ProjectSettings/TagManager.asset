@@ -10,6 +10,7 @@ TagManager:
   - EnemyBullet
   - ObstacleDetector
   - Object
+  - Boundary
   layers:
   - Default
   - TransparentFX

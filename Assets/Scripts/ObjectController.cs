@@ -83,7 +83,7 @@ public class ObjectController : MonoBehaviour
         }
 
         // If the object comes into contact with an obstacle, set gravityScale to 0
-        if (otherGO.tag == "Ground") {
+        if (otherGO.tag == "Ground" || otherGO.tag == "Boundary") {
             rb.gravityScale = 0;
         }
     }
