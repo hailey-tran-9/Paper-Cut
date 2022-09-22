@@ -652,7 +652,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4999995, y: -1.6099999, z: 0}
+  m_LocalPosition: {x: -6.0199995, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -756,7 +756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816195087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4999995, y: -1.6099999, z: 0}
+  m_LocalPosition: {x: -6.0199995, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -798,6 +798,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1010885668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1360004247383749959, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+  m_PrefabInstance: {fileID: 1360004247067061714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1013537380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2176,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1360004247383749956, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
   m_PrefabInstance: {fileID: 1360004247067061714}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2099304599
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010885668}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5944380911d234cdf88d5091dc0d4f20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2105785316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2321,12 +2346,24 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1360004247383749956, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360004247383749956, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360004247383749956, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360004247383749956, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: -6.02
       objectReference: {fileID: 0}
     - target: {fileID: 1360004247383749956, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.61
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1360004247383749956, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2361,6 +2398,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1360004247383749957, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bbdab1e9f8d1141deaf4c374638157df, type: 3}
+    - target: {fileID: 1360004247383749957, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -2384,6 +2425,10 @@ PrefabInstance:
       propertyPath: vcam
       value: 
       objectReference: {fileID: 816195088}
+    - target: {fileID: 1360004247383749962, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+      propertyPath: m_Radius
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 1360004247383749963, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
       propertyPath: m_Constraints
       value: 4
