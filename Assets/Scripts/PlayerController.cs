@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     #region Combat_functions
     // Decrease the player's health
-    void LoseHp(int dmg)
+    public void LoseHp(int dmg)
     {
         Debug.Log("Player lost " + dmg.ToString() + "!");
         hp -= dmg;
