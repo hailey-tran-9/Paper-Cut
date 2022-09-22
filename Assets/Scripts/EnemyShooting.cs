@@ -32,6 +32,8 @@ public class EnemyShooting : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
+        animator.SetBool("Fire", false);
+
         if (!canFire)
         {
             timer += Time.deltaTime;
@@ -46,6 +48,7 @@ public class EnemyShooting : MonoBehaviour
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            animator.SetBool("Fire", true);
         }
     }
 }
