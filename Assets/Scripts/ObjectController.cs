@@ -26,11 +26,13 @@ public class ObjectController : MonoBehaviour
         } else if (currDir == "left") {
             rb.velocity = Vector2.left * force;
             yield return new WaitForSeconds(duration);
+            rb.gravityScale = 0;
         } else if (currDir == "up") {
             rb.gravityScale = -force;
         } else if (currDir == "right") {
             rb.velocity = Vector2.right * force;
             yield return new WaitForSeconds(duration);
+            rb.gravityScale = 0;
         }
         rb.velocity = Vector2.zero;
     }
@@ -78,6 +80,11 @@ public class ObjectController : MonoBehaviour
         // If the object comes into contact with an enemy, do damage and destroy itself
         if (otherGO.tag == "Enemy") {
             StartCoroutine(OnCollisionHelper(otherGO));
+        }
+
+        // If the object comes into contact with an obstacle, set gravityScale to 0
+        if (otherGO.tag == "Ground") {
+            rb.gravityScale = 0;
         }
     }
     #endregion
