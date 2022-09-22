@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2902645778886318387, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
       propertyPath: dmg
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2902645778886318387, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
       propertyPath: force
