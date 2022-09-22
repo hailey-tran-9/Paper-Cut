@@ -13,7 +13,7 @@ public class ShredderAnim : MonoBehaviour
     // Start is called before the first frame update
     private bool getCanFire()
     {
-        return es.canFire();
+        return es.canFire;
     }
 
     // Update is called once per frame
