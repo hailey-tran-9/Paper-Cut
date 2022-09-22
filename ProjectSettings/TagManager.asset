@@ -7,7 +7,7 @@ TagManager:
   - Ground
   - Enemy
   - Bullet
-  - ObstacleDetector
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
