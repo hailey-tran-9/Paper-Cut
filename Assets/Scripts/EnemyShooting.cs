@@ -12,11 +12,13 @@ public class EnemyShooting : MonoBehaviour
     private float timer;
     public float timeBetweenFiring;
     public int detectionRadius;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        animator = GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
