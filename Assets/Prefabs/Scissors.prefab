@@ -7,18 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 258778362356557363, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 48ecf6140398444afa3fc09755e2faa5, type: 2}
-    - target: {fileID: 258778363655386885, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
-      propertyPath: m_Name
-      value: Scissors
-      objectReference: {fileID: 0}
-    - target: {fileID: 258778363655386886, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 96fcb0e3597df447e9fbd5efc96d1a4d, type: 3}
     - target: {fileID: 2902645778886318348, guid: 2dac69b7fb6f78e4c9f23899b70fd49d, type: 3}
       propertyPath: m_Name
       value: Scissors
