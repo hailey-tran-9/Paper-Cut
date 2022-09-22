@@ -46,4 +46,9 @@ public class EnemyShooting : MonoBehaviour
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
     }
+
+    public bool canFire()
+    {
+        return canFire;
+    }
 }
