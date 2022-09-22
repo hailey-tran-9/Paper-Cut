@@ -30,4 +30,14 @@ public class EnemyBulletScript : MonoBehaviour
         Destroy(gameObject);
     }
     #endregion
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+
+        if (otherGO.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

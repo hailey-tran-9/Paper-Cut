@@ -30,4 +30,14 @@ public class BulletScript : MonoBehaviour
         Destroy(gameObject);
     }
     #endregion
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+
+        if(otherGO.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
