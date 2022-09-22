@@ -2306,7 +2306,7 @@ MonoBehaviour:
   bulletTransform: {fileID: 919107239}
   canFire: 0
   timeBetweenFiring: 2
-  detectionRadius: 0
+  detectionRadius: 10
   animator: {fileID: 0}
 --- !u!1 &1013537380
 GameObject:
