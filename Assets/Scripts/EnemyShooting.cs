@@ -11,6 +11,7 @@ public class EnemyShooting : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
+    public int detectionRadius;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,7 @@ public class EnemyShooting : MonoBehaviour
         if (!canFire)
         {
             timer += Time.deltaTime;
-            if(timer > timeBetweenFiring)
+            if(timer > timeBetweenFiring && Vector3.Distance(playerPos, transform.position) <= detectionRadius)
             {
                 canFire = true;
                 timer = 0;
