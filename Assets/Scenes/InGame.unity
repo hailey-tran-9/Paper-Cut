@@ -172,6 +172,11 @@ MonoBehaviour:
   bulletTransform: {fileID: 1061857933}
   canFire: 1
   timeBetweenFiring: 0.3
+--- !u!1 &189618975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1360004247383749959, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+  m_PrefabInstance: {fileID: 1360004247067061714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &202710044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,6 +1626,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1360004247383749956, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
   m_PrefabInstance: {fileID: 1360004247067061714}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2099304604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189618975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da382363b2df04e76b8646b2ec627815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!95 &2099304605
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189618975}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5944380911d234cdf88d5091dc0d4f20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2105785316
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -19,12 +19,12 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             animator.SetFloat("Speed", 1);
-            animator.SetFloat("dirX", -1);
+            sr.flipX = true;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             animator.SetFloat("Speed", 1);
-            animator.SetFloat("dirX", 1);
+            sr.flipX = false;
         }
         else
         {
