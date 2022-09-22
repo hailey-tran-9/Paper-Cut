@@ -12,7 +12,6 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        animator.SetFloat("dirX", 1);
     }
     private void Update()
     {
