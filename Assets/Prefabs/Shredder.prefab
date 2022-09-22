@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1297130568972330884}
   - component: {fileID: 857177992100945719}
   - component: {fileID: 3480857024009004495}
+  - component: {fileID: -1971353966470235721}
   m_Layer: 4
   m_Name: Shredder
   m_TagString: Enemy
@@ -148,3 +149,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   damage: 5
+--- !u!95 &-1971353966470235721
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011363080473499920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a82515e2717754e3081a94a1434f96d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
