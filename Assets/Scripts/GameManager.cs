@@ -19,8 +19,10 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        tutorial.SetActive(true);
-        tutorialOpen = true;
+        if (SceneManager.GetActiveScene().name == "InGame") {
+            tutorial.SetActive(true);
+            tutorialOpen = true;
+        }
     }
 
     void Update()
@@ -47,6 +49,9 @@ public class GameManager : MonoBehaviour
     }
     public void MainMenu() {
         SceneManager.LoadScene("InGame");
+    }
+    public void QuitGame() {
+        Application.Quit();
     }
     #endregion
 }
