@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   damage: 5
+  enemies: {fileID: 4328823907712719543, guid: a6019d0921e9ab74ead347e2a4fecb73, type: 3}
 --- !u!95 &6069280863941826648
 Animator:
   serializedVersion: 4

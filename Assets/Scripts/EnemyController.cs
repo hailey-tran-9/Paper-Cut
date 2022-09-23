@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     [Tooltip("How much damage the player will take")]
     private int damage;
+
+    public GameObject enemies;
     #endregion
 
     #region Combat_functions
@@ -37,7 +39,14 @@ public class EnemyController : MonoBehaviour
         {
             // Destroy the enemy
             Destroy(gameObject);
+            Debug.Log(enemies.transform.childCount.ToString());
         }
+
+        
+        if (enemies.transform.childCount <= 1) {
+            GameObject.FindWithTag("GameController").GetComponent<GameManager>().WinGame();
+        }
+        
     }
 
     public void LoseHp(int amount)
