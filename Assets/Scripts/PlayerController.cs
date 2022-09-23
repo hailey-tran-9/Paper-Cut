@@ -38,8 +38,20 @@ public class PlayerController : MonoBehaviour
     // Decrease the player's health
     public void LoseHp(int dmg)
     {
-        Debug.Log("Player lost " + dmg.ToString() + "!");
         hp -= dmg;
+        // Debug.Log("HP: " + hp.ToString());
+
+        if (hp > 40 && hp < 50) {
+            hearts[4].SetActive(false);
+        } else if (hp > 30 && hp < 40) {
+            hearts[3].SetActive(false);
+        } else if (hp > 20 && hp < 30) {
+            hearts[2].SetActive(false);
+        } else if (hp > 10 && hp < 20) {
+            hearts[1].SetActive(false);
+        } else if (hp <= 0) {
+            hearts[0].SetActive(false);
+        }
 
         // Check whether or not the player dies
         if (hp <= 0) {
@@ -79,7 +91,6 @@ public class PlayerController : MonoBehaviour
         for (int i = 0; i < children; i++) {
             hearts[i] = heartsGO.transform.GetChild(i).gameObject;
         }
-        
     }
 
     // Damage the player if it comes in contact with an enemy
