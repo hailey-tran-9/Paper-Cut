@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     #region Combat_variables
     public static string dir;
     public int hp;
+    public GameObject heartsGO;
+    GameObject[] hearts;
     #endregion
 
     #region Direction_variables
@@ -69,6 +71,15 @@ public class PlayerController : MonoBehaviour
 
         // Set the initial jump variables
         isJumping = false;
+
+        // Initialize hearts array
+        hearts = new GameObject[5];
+
+        int children = heartsGO.transform.childCount;
+        for (int i = 0; i < children; i++) {
+            hearts[i] = heartsGO.transform.GetChild(i).gameObject;
+        }
+        
     }
 
     // Damage the player if it comes in contact with an enemy
