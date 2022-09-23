@@ -56,6 +56,7 @@ public class ObjectController : MonoBehaviour
         diff = diff.normalized * 5;
         rb.AddForce(diff, ForceMode2D.Impulse);
         rb.gravityScale = -2;
+        dmg = 0;
         yield return new WaitForSeconds(0.35f);
 
         // Destroy this object

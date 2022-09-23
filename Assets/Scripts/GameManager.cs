@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    #region Manager_variables
     public static GameManager Instance = null;
-    public GameObject tutorial;
+    public GameObject tutorialGO;
+    static GameObject tutorial;
     bool tutorialOpen;
+    #endregion
 
     #region Unity_functions
     private void Awake() {
@@ -20,6 +23,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         if (SceneManager.GetActiveScene().name == "InGame") {
+            tutorial = Instantiate(tutorialGO);
             tutorial.SetActive(true);
             tutorialOpen = true;
         }
