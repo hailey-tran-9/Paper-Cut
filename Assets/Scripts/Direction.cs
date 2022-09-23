@@ -16,16 +16,20 @@ public class Direction : MonoBehaviour
     }
     private void Update()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-        enemyPos = transform.position;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        if (enemyPos.x > playerPos.x)
-        {
-            sr.flipX = false;
-        }
-        else if (enemyPos.x < playerPos.x)
-        {
-            sr.flipX = true;
+        if (player != null) {
+        playerPos = player.transform.position;
+            enemyPos = transform.position;
+
+            if (enemyPos.x > playerPos.x)
+            {
+                sr.flipX = false;
+            }
+            else if (enemyPos.x < playerPos.x)
+            {
+                sr.flipX = true;
+            }
         }
     }
 }

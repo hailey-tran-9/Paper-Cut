@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
-  damage: 5
+  damage: 10
 --- !u!95 &-1971353966470235721
 Animator:
   serializedVersion: 4

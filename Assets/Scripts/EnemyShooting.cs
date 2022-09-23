@@ -24,31 +24,33 @@ public class EnemyShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 playerPos = Player.position;
+        if (Player != null) {
+            Vector3 playerPos = Player.position;
 
-        Vector3 rotation = playerPos - transform.position;
+            Vector3 rotation = playerPos - transform.position;
 
-        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+            float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0, 0, rotZ);
+            transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
-        animator.SetBool("Fire", false);
+            animator.SetBool("Fire", false);
 
-        if (!canFire)
-        {
-            timer += Time.deltaTime;
-            if(timer > timeBetweenFiring && Vector3.Distance(playerPos, transform.position) <= detectionRadius)
+            if (!canFire)
             {
-                canFire = true;
-                timer = 0;
+                timer += Time.deltaTime;
+                if(timer > timeBetweenFiring && Vector3.Distance(playerPos, transform.position) <= detectionRadius)
+                {
+                    canFire = true;
+                    timer = 0;
+                }
             }
-        }
 
-        if(canFire)
-        {
-            canFire = false;
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
-            animator.SetBool("Fire", true);
+            if(canFire)
+            {
+                canFire = false;
+                Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+                animator.SetBool("Fire", true);
+            }
         }
     }
 }
