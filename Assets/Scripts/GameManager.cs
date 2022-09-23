@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
-    public GameObject tutorial;
+    public GameObject tutorialGO;
+    static GameObject tutorial;
     bool tutorialOpen;
 
     #region Unity_functions
@@ -19,8 +20,10 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
+        Debug.Log(SceneManager.GetActiveScene().name);
+
         if (SceneManager.GetActiveScene().name == "InGame") {
-            tutorial.SetActive(true);
+            tutorial = Instantiate(tutorialGO);
             tutorialOpen = true;
         }
     }
