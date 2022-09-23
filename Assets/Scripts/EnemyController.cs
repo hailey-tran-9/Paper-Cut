@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     [Tooltip("How much damage the player will take")]
     private int damage;
+
+    string name;
     #endregion
 
     #region Combat_functions
@@ -37,12 +39,24 @@ public class EnemyController : MonoBehaviour
         {
             // Destroy the enemy
             Destroy(gameObject);
+
+            if (name == "Shredder") {
+                GameObject gc = GameObject.FindGameObjectWithTag("GameController");
+                gc.GetComponent<GameManager>().WinGame();
+            }
         }
     }
 
     public void LoseHp(int amount)
     {
         StartCoroutine(LoseHpHelper(amount));
+    }
+    #endregion
+
+    #region Unity_functions
+    void Awake()
+    {
+        name = gameObject.name;
     }
     #endregion
 }
