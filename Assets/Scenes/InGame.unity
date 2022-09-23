@@ -314,7 +314,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4768498792673269364, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Name
-      value: Heart (1)
+      value: Heart 2
       objectReference: {fileID: 0}
     - target: {fileID: 4768498792673269365, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Pivot.x
@@ -2616,7 +2616,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4768498792673269364, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Name
-      value: Heart (3)
+      value: Heart 4
       objectReference: {fileID: 0}
     - target: {fileID: 4768498792673269365, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Pivot.x
@@ -4015,7 +4015,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4768498792673269364, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Name
-      value: Heart
+      value: Heart 1
       objectReference: {fileID: 0}
     - target: {fileID: 4768498792673269365, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Pivot.x
@@ -4431,7 +4431,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4768498792673269364, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Name
-      value: Heart (2)
+      value: Heart 3
       objectReference: {fileID: 0}
     - target: {fileID: 4768498792673269365, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Pivot.x
@@ -4818,7 +4818,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4768498792673269364, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Name
-      value: Heart (4)
+      value: Heart 5
       objectReference: {fileID: 0}
     - target: {fileID: 4768498792673269365, guid: a203fa4f1af154648a00001d61d59249, type: 3}
       propertyPath: m_Pivot.x
@@ -5067,6 +5067,10 @@ PrefabInstance:
       propertyPath: south
       value: 
       objectReference: {fileID: 788427426}
+    - target: {fileID: 1360004247383749960, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
+      propertyPath: heartsGO
+      value: 
+      objectReference: {fileID: 727774255}
     - target: {fileID: 1360004247383749963, guid: a4e4a7960c316474f8b77d4dff8f7752, type: 3}
       propertyPath: m_Constraints
       value: 4
